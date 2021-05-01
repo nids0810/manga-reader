@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// import components
+import Header from './components/layout/Header'
+import Footer from './components/layout/Footer'
+import Home from './components/layout/Home'
+
+import MangaView from './components/manga/MangaView'
+import ChapterView from './components/manga/ChapterView'
+
+const App = () => {
+	return (
+		<Router>
+			<Header />
+			<div className='container'>
+				<Route path='/' exact component={Home} />
+				<Route path='/manga/:id' exact component={MangaView} />
+				<Route path='/manga/:id/chapter/:id' exact component={ChapterView} />
+			</div>
+			<Footer />
+		</Router>
+	)
 }
 
-export default App;
+export default App
