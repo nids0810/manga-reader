@@ -7,7 +7,7 @@ const Manga = ({ manga }) => {
 
 	const viewManga = (id) => {
 		history.push({
-			pathname: '/manga/' + id,
+			pathname: '/manga-reader/manga/' + id,
 			//search: '?query=abc',
 			state: { manga: manga },
 		})
@@ -19,20 +19,20 @@ const Manga = ({ manga }) => {
 		return (
 			<div className='card text-center m-3 p-3' style={{ width: '300px' }}>
 				{/* <h5 class='card-header'>Featured</h5> */}
-				<img
-					className='card-img-top'
-					src={manga.img}
-					alt={manga.title}
-					style={{ width: '100%' }}
-				/>
+				{manga.enddate === 'Present' ? (
+					<span className='badge badge-warning'>Running</span>
+				) : (
+					<span className='badge badge-success'>Compelted</span>
+				)}
+				<img className='img-thumbnail' src={manga.img} alt={manga.title} />
 				<div className='card-body'>
-					<h1 className='card-title'>{manga.title}</h1>
+					<h3 className='card-title'>{manga.title}</h3>
 					<button
 						style={{ width: '100%' }}
 						className='btn btn-primary stretched-link'
 						onClick={() => viewManga(manga.id)}
 					>
-						View
+						Read Manga
 					</button>
 				</div>
 			</div>

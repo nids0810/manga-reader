@@ -17,13 +17,13 @@ const Chapter = ({ chapter, manga }) => {
 	return (
 		<>
 			<li
-				className='list-group-item'
+				className='list-group-item list-group-item-light list-group-item-action border '
 				style={{ cursor: 'pointer' }}
 				onClick={() => {
 					viewChapter(chapter.chapterno)
 				}}
 			>
-				<h4 className='card-title'>{'Chapter ' + chapter.chapterno}</h4>
+				<h4 className='card-title'>{'Read Chapter ' + chapter.chapterno}</h4>
 			</li>
 		</>
 	)

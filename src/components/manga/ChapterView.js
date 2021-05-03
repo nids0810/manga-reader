@@ -5,13 +5,12 @@ import cheerio from 'cheerio'
 import Page from './Page'
 import Spinner from '../layout/Spinner'
 import replaceSecondoccurrence from '../../utils/replaceSecondoccurrence'
-import airthmaticOperationOnStrings from '../../utils/airthmaticOperationOnStrings'
 
 const ChapterView = (props) => {
 	let history = useHistory()
 	const location = useLocation()
 	const [chapter, setChapter] = useState(location.state.chapter)
-	const [manga, setManga] = useState(location.state.manga)
+	const [manga] = useState(location.state.manga)
 	const pages = chapter.pages
 
 	useEffect(() => {
@@ -22,16 +21,18 @@ const ChapterView = (props) => {
 	}, [])
 
 	const prevChapter = (chapterno) => {
-		let newChapterNo = airthmaticOperationOnStrings(chapterno, '-1')
+		const index = manga.chapters.findIndex(
+			(item) => item.chapterno === chapterno
+		)
+
+		const newChapter = manga.chapters[index + 1]
 
 		let newPath = replaceSecondoccurrence(
 			history.location.pathname,
-			newChapterNo
+			newChapter.chapterno
 		)
 
-		const newChapter = manga.chapters.filter(
-			(item) => item.chapterno === newChapterNo
-		)
+		setChapter(newChapter)
 
 		history.push({
 			pathname: newPath,
@@ -40,14 +41,18 @@ const ChapterView = (props) => {
 	}
 
 	const nextChapter = (chapterno) => {
-		let newChapterNo = airthmaticOperationOnStrings(chapterno, '1')
-
-		const newPath = replaceSecondoccurrence(
-			history.location.pathname,
-			newChapterNo
+		const index = manga.chapters.findIndex(
+			(item) => item.chapterno === chapterno
 		)
 
-		const newChapter = manga.chapters.filter((item) => item === newChapterNo)
+		const newChapter = manga.chapters[index - 1]
+
+		let newPath = replaceSecondoccurrence(
+			history.location.pathname,
+			newChapter.chapterno
+		)
+
+		setChapter(newChapter)
 
 		history.push({
 			pathname: newPath,
@@ -57,9 +62,15 @@ const ChapterView = (props) => {
 
 	useEffect(() => {
 		const fetchCurChapter = async () => {
+			const link =
+				chapter.chapterlink !== undefined
+					? chapter.chapterlink
+					: chapter[0].chapterlink
+			const url = link
+			//const url = `https://cors-anywhere.herokuapp.com/${link}`
 			axios({
 				method: 'get',
-				url: `https://cors-anywhere.herokuapp.com/${chapter.chapterlink}`,
+				url: url,
 				headers: { 'X-Requested-With': 'XMLHttpRequest' },
 			})
 				.then(function (res) {
@@ -93,7 +104,7 @@ const ChapterView = (props) => {
 				.catch((err) => console.log(err))
 		}
 		fetchCurChapter()
-	}, [chapter.chapterlink])
+	}, [chapter])
 
 	if (pages === undefined || pages.length === 0) {
 		return <Spinner />
@@ -106,7 +117,7 @@ const ChapterView = (props) => {
 				<h1 className='mt-3'>{chapter.chaptername}</h1>
 				<ul
 					className='d-flex flex-column justify-content-center align-items-center'
-					style={{ padding: '10px 0px' }}
+					style={{ padding: '10px 0px', listStyleType: 'none' }}
 				>
 					{pages.map((data) => (
 						<li key={data.pageno}>
@@ -118,6 +129,12 @@ const ChapterView = (props) => {
 					<div className='d-flex flex-row justify-content-center align-items-center'>
 						<button
 							className='btn btn-success'
+							disabled={
+								manga.chapters[manga.chapters.length - 1].chapterno ===
+								chapter.chapterno
+									? true
+									: false
+							}
 							onClick={() => {
 								prevChapter(chapter.chapterno)
 							}}
@@ -127,10 +144,12 @@ const ChapterView = (props) => {
 						</button>
 						<button
 							className='btn btn-success'
+							disabled={
+								manga.chapters[0].chapterno === chapter.chapterno ? true : false
+							}
 							onClick={() => {
 								nextChapter(chapter.chapterno)
 							}}
-							disabled
 							style={{ marginLeft: '5px' }}
 						>
 							Next chapter

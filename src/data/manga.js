@@ -17,6 +17,22 @@ export const mangaData = [
 	},
 	{
 		id: '001',
+		title: 'Attack on Titan: Shingeki no Kyojin',
+		description:
+			'It is set in a fantasy world where humanity lives within territories surrounded by three enormous walls that protect them from gigantic man-eating humanoids referred to as Titans. The anime follows a group of teenagers living inside cities surrounded by three enormous walls that protect the last vestiges of humanity from gigantic humanoid “Titans” that devour people seemingly for no reason. One day, the outer wall is breached by a colossal Titan and thousands died following the attack, including the mother of Eren Yeager, our protagonist. The show then follows Eren as he vows to join the military so he can kill every single Titan he can find.',
+		img:
+			'https://static.wikia.nocookie.net/shingekinokyojin/images/d/db/Volume_1_Cover.png',
+		link: 'https://attackontitan.online/',
+		writtenby: 'Hajime Isayama',
+		imprint: 'Shōnen Magazine Comics',
+		magazine: 'Bessatsu Shōnen Magazine',
+		startdate: 'September 9, 2009',
+		enddate: 'April 9, 2021',
+		chapterlength: '',
+		chapters: [],
+	},
+	{
+		id: '002',
 		title: 'Boku no Hero Academia',
 		description:
 			'In a world where people with superpowers are the norm, Izuku Midoriya born without any powers, despite that he still dreams of becoming a hero.Izuku Midoriya determined to enroll in a prestigious hero academy and learn what it really means to be a hero.',
@@ -32,7 +48,87 @@ export const mangaData = [
 		chapters: [],
 	},
 	{
-		id: '002',
+		id: '003',
+		title: 'Hunter × Hunter',
+		description:
+			'The story focuses on a young boy named Gon Freecss, who discovers that his father, who he was told had left him at a young age, is actually a world renowned Hunter, a licensed profession for those who specialize in, but are not limited to, fantastic pursuits such as locating rare or unidentified animal species, treasure hunting, surveying unexplored enclaves, or hunting down lawless individuals. Despite being abandoned by his father, Gon departs upon a journey to follow in his footsteps, pass the rigorous Hunter Examination, and eventually find his father. Along the way, Gon meets various other Hunters, including main cast members Kurapika, Leorio, and Killua, and also encounters the paranormal. The original inspiration for the manga came from Togashi’s own collecting hobby. Hunters are a special breed, dedicated to tracking down treasures, magical beasts, and even other men. But such pursuits require a license, and less than one in a hundred thousand can pass the gruelling qualification exam. Those who do pass gain access to restricted areas, amazing stores of information, and the right to call themselves Hunters.',
+		img:
+			'https://hunter-x-hunter.online/wp-content/uploads/2020/04/hunterxhunter-volume-1.png',
+		link: 'https://hunter-x-hunter.online/',
+		writtenby: 'Yoshihiro Togashi',
+		imprint: 'Jump Comics',
+		magazine: 'Weekly Shōnen Jump',
+		startdate: 'March 16, 1998',
+		enddate: 'Present',
+		chapterlength: '',
+		chapters: [],
+	},
+	{
+		id: '004',
+		title: 'Demon Slayer: Kimetsu no Yaiba',
+		description:
+			'The setting is Taisho era Japan. Tanjiro is a kindhearted young boy who lived peacefully with his family as a coal seller. Their normal life changes completely when his family is slaughtered by demons. The only other survivor, Tanjiro’s younger sister Nezuko, has become a ferocious demon. In order to return Nezuko to normal and get revenge on the demon that killed their family, the two of them depart on a journey. From a young talent, an adventure tale of blood and swords begins!',
+		img:
+			'https://demonslayer-mangaonline.com/wp-content/uploads/2020/12/Kimetsu-no-Yaiba_V1-651x1024-low.jpg',
+		link: 'https://demonslayer-mangaonline.com/',
+		writtenby: 'Koyoharu Gotouge',
+		imprint: 'Jump Comics',
+		magazine: 'Weekly Shōnen Jump',
+		startdate: 'February 15, 2016',
+		enddate: 'May 18, 2020',
+		chapterlength: '',
+		chapters: [],
+	},
+	{
+		id: '005',
+		title: 'Fullmetal Alchemist: Hagane no Renkinjutsushi',
+		description:
+			'The world of Fullmetal Alchemist is styled after the European Industrial Revolution. Set in a fictional universe in which alchemy is one of the advanced natural techniques revolved around scientific laws of equal exchange, the story follows two alchemist brothers named Edward and Alphonse Elric, who are searching for the philosopher’s stone to restore their bodies after a failed attempt to bring their mother back to life using alchemy. They are especially driven as Alphonse’s body has been entirely removed, and he now lives as a soul trapped in a lifeless armor, while Edward has exchanged his leg to attempt to bring his mother back, and his arm to tie Alphonse’s soul to a set of armor that was lying nearby.',
+		img:
+			'https://full-metal-alchemist.com/wp-content/uploads/2019/10/Capture2.jpg',
+		link: 'https://full-metal-alchemist.com/',
+		writtenby: 'Hiromu Arakawa',
+		imprint: 'Gangan Comics',
+		magazine: 'Monthly Shōnen Gangan',
+		startdate: 'July 12, 2001',
+		enddate: 'June 11, 2010',
+		chapterlength: '',
+		chapters: [],
+	},
+	{
+		id: '006',
+		title: 'The Promise Neverland',
+		description:
+			'The story follows a group of orphaned children in their escape plan from an orphanage. Norman, Emma, and Ray are the brightest kids at the Grace Field House orphanage. And under the care of the woman they refer to as “Mama,” all the kids have enjoyed a comfortable life. Good food, clean clothes and the perfect environment to learn- what more could an orphan ask for? One day, though, Emma and Norman uncover the dark and twisted truth of the outside world they are forbidden from seeing. Soon, they must make haste to plan their escape!',
+		img:
+			'https://promisedneverland.com/wp-content/uploads/2019/11/The_Promised_Neverland_Volume_1.jpg',
+		link: 'https://promisedneverland.com/',
+		writtenby: 'Kaiu Shirai',
+		imprint: 'Jump Comics',
+		magazine: 'Weekly Shōnen Jump',
+		startdate: 'August 1, 2016',
+		enddate: 'June 15, 2020',
+		chapterlength: '',
+		chapters: [],
+	},
+	{
+		id: '007',
+		title: 'Death Note: Desu Nōto',
+		description:
+			' The story follows Light Yagami, a teen genius who stumbles across a mysterious otherworldly notebook: the “Death Note”, which belonged to the Shinigami Ryuk, and grants the user the supernatural ability to kill anyone whose name is written in its pages.',
+		img:
+			'https://death-note-online.com/wp-content/uploads/2020/01/death-note-manga-vol-1.jpg',
+		link: 'https://death-note-online.com/',
+		writtenby: 'Tsugumi Ohba',
+		imprint: 'Jump Comics',
+		magazine: 'Weekly Shōnen Jump',
+		startdate: 'December 1, 2003',
+		enddate: 'May 15, 2006',
+		chapterlength: '',
+		chapters: [],
+	},
+	{
+		id: '008',
 		title: 'Dr. Stone',
 		description:
 			'Dr. STONE is a serialized manga and anime series created by Riichiro Inagaki and Boichi. After a cataclysm causes everyone in the world to turn to stone, two boys awaken and take on the daunting task of trying to revive the rest of humanity. This epic struggle quickly turns into a fight between the opposing forces of science and might - and who, exactly, deserves to be revived.',

@@ -4,13 +4,9 @@ import Mangas from '../manga/Mangas'
 const Home = () => {
 	return (
 		<React.Fragment>
-			<main>
-				<div className='container bg-light'>
-					<div className='row'>
-						<Mangas />
-					</div>
-				</div>
-			</main>
+			<div className='row bg-light'>
+				<Mangas />
+			</div>
 		</React.Fragment>
 	)
 }
