@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/manga-reader/static/css/main.e3cb2733.chunk.css",
-    "main.js": "/manga-reader/static/js/main.23f0a389.chunk.js",
-    "main.js.map": "/manga-reader/static/js/main.23f0a389.chunk.js.map",
+    "main.js": "/manga-reader/static/js/main.bf14937e.chunk.js",
+    "main.js.map": "/manga-reader/static/js/main.bf14937e.chunk.js.map",
     "runtime-main.js": "/manga-reader/static/js/runtime-main.13cd963c.js",
     "runtime-main.js.map": "/manga-reader/static/js/runtime-main.13cd963c.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/manga-reader/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.376a858f.chunk.js": "/manga-reader/static/js/2.376a858f.chunk.js",
-    "static/js/2.376a858f.chunk.js.map": "/manga-reader/static/js/2.376a858f.chunk.js.map",
+    "static/js/2.4e8592ef.chunk.js": "/manga-reader/static/js/2.4e8592ef.chunk.js",
+    "static/js/2.4e8592ef.chunk.js.map": "/manga-reader/static/js/2.4e8592ef.chunk.js.map",
     "static/js/3.b8432044.chunk.js": "/manga-reader/static/js/3.b8432044.chunk.js",
     "static/js/3.b8432044.chunk.js.map": "/manga-reader/static/js/3.b8432044.chunk.js.map",
     "index.html": "/manga-reader/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/manga-reader/static/css/2.4c97ca4f.chunk.css.map",
     "static/css/main.e3cb2733.chunk.css.map": "/manga-reader/static/css/main.e3cb2733.chunk.css.map",
-    "static/js/2.376a858f.chunk.js.LICENSE.txt": "/manga-reader/static/js/2.376a858f.chunk.js.LICENSE.txt"
+    "static/js/2.4e8592ef.chunk.js.LICENSE.txt": "/manga-reader/static/js/2.4e8592ef.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.13cd963c.js",
     "static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.376a858f.chunk.js",
+    "static/js/2.4e8592ef.chunk.js",
     "static/css/main.e3cb2733.chunk.css",
-    "static/js/main.23f0a389.chunk.js"
+    "static/js/main.bf14937e.chunk.js"
   ]
 }
